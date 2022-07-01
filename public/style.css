@@ -1,0 +1,62 @@
+body {
+    font-family: "Helvetica Neue LT Std", sans-serif;
+    font-weight: 500;
+}
+
+h2 {
+    letter-spacing: 6.46154px;
+}
+
+p {
+    font-size: 18px;
+}
+
+label {
+    color: #000000;
+}
+
+.form-control {
+    color: rgba(154, 154, 154, 1);
+    background-color: #fff;
+    border: 1px solid #bec6ca;
+    border-radius: 0px;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #000000;
+    border-color: #000000;
+    border-radius: 25px;
+}
+
+.btn-success:hover {
+    color: #fff;
+    background-color: #E88172;
+    border-color: #E88172;
+}
+
+.btn-success:disabled {
+    color: #fff;
+    background-color: #9A9A9A;
+    border-color: #9A9A9A;
+}
+
+.alert-danger {
+    border-radius: 0px;
+}
+
+.img-responsive.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .img-responsive {
+      display: none;
+    }
+    .img-responsive.mobile {
+      display: block;
+    }
+    .prr-0 {
+        padding-bottom: 0px!important;
+    }
+}
