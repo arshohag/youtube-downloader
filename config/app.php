@@ -125,6 +125,20 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Application Environment Variables
+    |--------------------------------------------------------------------------
+    |
+    | This value determines the "environment" your application is currently
+    | running in. This may determine how you prefer to configure various
+    | services the application utilizes. Set this in your ".env" file.
+    |
+    */
+
+    'yt_dlp_path' => env('YT_DLP_PATH'),
+    'python_path' => env('PYTHON_PATH'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Autoloaded Service Providers
     |--------------------------------------------------------------------------
     |

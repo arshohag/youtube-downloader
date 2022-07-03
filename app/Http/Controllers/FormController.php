@@ -17,21 +17,21 @@ class FormController extends Controller
     {
         $yt = new YoutubeDl();
 
-        $yt->setBinPath('/usr/local/bin/yt-dlp');
-        $yt->setPythonPath('/usr/local/bin/python3');
+        $yt->setBinPath(config('app.yt_dlp_path'));
+        $yt->setPythonPath(config('app.python_path'));
 
-        // $yt->onProgress(static function (?string $progressTarget, string $percentage, string $size, string $speed, string $eta, ?string $totalTime): void {
-        //     echo "Download file: $progressTarget; Percentage: $percentage; Size: $size";
-        //     if ($speed) {
-        //         echo "; Speed: $speed";
-        //     }
-        //     if ($eta) {
-        //         echo "; ETA: $eta";
-        //     }
-        //     if ($totalTime !== null) {
-        //         echo "; Downloaded in: $totalTime";
-        //     }
-        // });
+        $yt->onProgress(static function (?string $progressTarget, string $percentage, string $size, string $speed, string $eta, ?string $totalTime): void {
+            echo "Download file: $progressTarget; Percentage: $percentage; Size: $size <br>";
+            if ($speed) {
+                echo "; Speed: $speed <br>";
+            }
+            if ($eta) {
+                echo "; ETA: $eta <br>";
+            }
+            if ($totalTime !== null) {
+                echo "; Downloaded in: $totalTime <br>";
+            }
+        });
 
         $collection = $yt->download(
             Options::create()
