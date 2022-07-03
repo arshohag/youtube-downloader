@@ -7,8 +7,8 @@ YouTube Downloader built using [Laravel](https://laravel.com/) and [YT-DLP](http
 Main features -
 
 -   Download YouTube Video using YT-DLP.
--   Download single video or playlist of video.
--   Download video directly in the server directory.
+-   Download a single video or playlist of videos.
+-   Download the video directly in the server directory.
 -   Input URL validation.
 -   Duplicate video download detection.
 
